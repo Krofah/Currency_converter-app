@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Currency Converter</h1>
+        <div class="currency_container">
+            <select id="currency">
+                <option value="EUR">&#8364; EUR</option>
+                <option value="GHS">&#8373; GHS</option>
+                <option value="NGN">&#8358; NGN</option>
+                <option value="USD" selected>&#x24; USD</option>
+                <option value="CAD">&#36; CAD</option>
+            </select>
+            <input type="number" id="amount" value="1" min="0">
+        </div>
+        <div class="currency_container">
+            <select id="other_currency">
+                <option value="GHS">&#8373; GHS</option>
+                <option value="EUR">&#8364; EUR</option>
+                <option value="CAD">&#36; CAD</option>
+                <option value="USD">&#x24; USD</option>
+            </select>
+            <input type="number" id="worth" disabled>
+        </div>
+        <p class="exchange_rate" id="exchange_rate"></p>
+    </div>
+    
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
